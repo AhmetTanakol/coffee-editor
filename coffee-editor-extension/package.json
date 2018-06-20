@@ -1,0 +1,47 @@
+{
+  "name": "coffee-editor-extension",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "1.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@jsonforms/core": "./jsonforms-core-2.0.2.tgz",
+    "@jsonforms/editor": "./jsonforms-editor-2.0.2.tgz",
+    "@jsonforms/material-renderers": "./jsonforms-material-renderers-2.0.2.tgz",
+    "@jsonforms/react": "./jsonforms-react-2.0.2.tgz",
+    "@material-ui/core": "^1.2.1",
+    "@material-ui/icons": "^1.0.0",
+    "@theia/core": "latest",
+    "ajv": "^6.4.0",
+    "json-refs": "^3.0.4",
+    "material-ui-pickers": "1.0.0-rc.9",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^4.4.9",
+    "recompose": "^0.27.1",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.106",
+    "@types/node": "^10.1.4",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/coffee-editor-frontend-module"
+    }
+  ]
+}
